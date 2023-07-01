@@ -75,7 +75,7 @@ router.get("/:id/edit", async (req, res) => {
 router.get("/:id", async (req, res) => {
   const id = req.params.id
 
-  const animal = await Animal.findById(id)
+  const animal = await Animals.findById(id)
   console.log(animal)
   const readyClass = animal.readyToEat ? "green" : "red"
   res.render("animals/show.ejs", { animal, readyClass, id })
