@@ -10,14 +10,19 @@
 <body>
     <h1>The Fruits App</h1>
     
-    <h2>Edit <%= fruit.name %></h2>
-    <form action="/animal/<%= id %>?_method=PUT" method="post">
-        <input type="text" name="name" placeholder="name of animal" value="<%= animal.name %>"/>
-        <input type="text" name="color" placeholder="color of animal" value="<%= animal.color %>"/>
-        <input type="checkbox" name="readyToEat" 
-        <%= animal.readyToEat ? "checked" : "" %>/>
-        <input type="submit" value="Edit <%= fruit.name %>"/>
-    </form>
+    <div class="main">
+        <h2>Edit Page</h2>
+        <form method="post" action="/animal/<%= oneAnimal._id%>?_method=PUT">
+            <label>Species: <br><input type="text" name="species" value="<%=oneAnimal.species%>"  /></label><br>
+            <label>Location: <br><input type="text" name="location"value="<%=oneAnimal.location%>" /></label><br>
+            <label> LifeExpectancy: <br><input type="number" name="lifeExpectancy" value="<%=oneAnimal.lifeExpectancy%>" /></label><br>
+            <label> Extinct: <input type="checkbox" name="extinct" <%=oneAnimal.extinct ? "checked": "" %> /></label><br>
+            <div style="display:inline-flex">
+                <input class="submits"type="submit"  value="Edit"/>
+                <a href="/animal"><button class="submits">Home Page</button></a>
+            </div>
+        </form>
+    </div>
     
 </body>
 </html>

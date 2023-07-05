@@ -5,7 +5,7 @@ const morgan = require("morgan") // importing the morgan library
 const PORT = process.env.PORT // GETTING THE PORT FROM OUR .ENV FILE
 const app = express() // express application
 const methodOverride = require("method-override") // import middleware for overriding for puts and deletes
-const fruitsRouter = require("./controllers/animals")
+const animalsRouter = require("./controllers/animals.js")
 
 
 // MIDDLEWARE (Functions that run between the request and response)

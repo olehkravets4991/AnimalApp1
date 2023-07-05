@@ -13,11 +13,9 @@
     <a href="/animal/new"><button>Create New Animal</button></a>
     
     <ul>
-        <% for(let i = 0; i < animals.length; i++){ %>
-
-            <li><a href="/animal/<%= animals[i]._id %>"><%= animals[i].name %></a></li>
-
-        <% } %>
+        <% allAnimals.forEach((animal, index)=>{%>
+            <a href="/animal/<%= animal._id%>"><h3>Name: <%= animal.species%></h3></a>
+              <% })%>
     </ul>
     
 </body>

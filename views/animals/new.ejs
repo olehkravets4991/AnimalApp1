@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruits</title>
+    <title>Animals</title>
     <%- include("../imports.ejs") %>
 </head>
 <body>
-    <h1>The Animals App</h1>
-    
-    <h2>Create a New Animal</h2>
-    <form action="/animal" method="post">
-        <input type="text" name="name" placeholder="name of animal"/>
-        <input type="text" name="color" placeholder="color of animal"/>
-        <input type="checkbox" name="readyToEat"/>
-        <input type="submit" value="Create animal"/>
-    </form>
+    <h1 >Create a New Animal</h1>
+    <div class="main">
+        <form method="post" action="/animal" >
+            <label>Species: <br><input type="text" name="species" /></label><br>
+            <label>Location: <br><input type="text" name="location" /></label><br>
+            <label> LifeExpectancy: <br><input type="number" name="lifeExpectancy" /></label><br>
+            <label> Extinct: <input type="checkbox" name="extinct"  /></label><br>
+            <div>
+                <input class= "submits" type="submit"  value="Add Animal"/>
+                <a href="/animal"><button class= "submits" >Home Page</button></a>
+            </div>
+        </form>
+        
+    </div>
     
 </body>
 </html>
